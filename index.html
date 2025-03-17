@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The band</title>
+        <link rel="icon" type="image/x-icon" href="https://www.iconarchive.com/download/i97937/flat-icons.com/flat/Guitar.ico">
+        <link rel="stylesheet" href="./assets/css/styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <div id="main">
+            <div id="header">
+                <ul id="nav">
+                    <li><a href="#">Home</a></li>
+                    <li onclick="closeMenu()"><a href="#band">Band</a></li>
+                    <li onclick="closeMenu()"><a href="#tour">Tour</a></li>
+                    <li onclick="closeMenu()"><a href="#contact">Contact</a></li>
+                    <li>
+                        <a href="#" onclick="event.preventDefault();">
+                            More
+                            <i class="fa-solid fa-sort-down nav-arrow-down"></i>
+                        </a>
+                        <ul class="dropdown">
+                            <li><a href="">Merchandise</a></li>
+                            <li><a href="">Extras</a></li>
+                            <li><a href="">Media</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- End nav -->
+
+                <!-- Begin: Search -->
+                <div id="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <!-- End: Search -->
+
+                <!-- Menu -->
+                <div id="menu-bars" onclick="toggleMenu()">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+
+            <div id="slider">
+                <div class="slider-title">
+                    <h2>Chicago</h2>
+                    <p><b>Thank you, Chicago - A night we won't forget.</b></p>
+                </div>
+            </div>
+
+            <div id="content">
+                <!-- Band section -->
+                <div class="content-section" id="band">
+                    <h1 class="section-heading">The band</h1>
+                    <p class="section-sub-heading">We love music</p>
+                    <p class="about-us">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <div class="member-list row">
+                        <div class="col col-third text-center">
+                            <p>Name</p>
+                            <img src="https://www.w3schools.com/w3images/bandmember.jpg" alt="">
+                        </div>
+                        <div class="col col-third text-center">
+                            <p>Name</p>
+                            <img src="https://www.w3schools.com/w3images/bandmember.jpg" alt="">
+                        </div>
+                        <div class="col col-third text-center">
+                            <p>Name</p>
+                            <img src="https://www.w3schools.com/w3images/bandmember.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tour section -->
+                <div class="theme-2">
+                    <div class="content-section" id="tour">
+                        <h1 class="section-heading text-white">Tour dates</h1>
+                        <p class="section-sub-heading text-white">Remember to book your tickets!</p>
+                        <br>
+                        <!-- Month ticket -->
+                        <ul class="month-ticket">
+                            <li>
+                                September
+                                <span class="sold-out">Sold out</span>
+                            </li>
+                            <li>
+                                October
+                                <span class="sold-out">Sold out</span>
+                            </li>
+                            <li>
+                                November
+                                <span class="badge">3</span>
+                            </li>
+                        </ul>
+
+                        <!-- Destination -->
+                        <div class="row row-padding">
+                            <div class="destination-ticket col col-padding col-third">
+                                <img src="https://www.w3schools.com/w3images/newyork.jpg" alt="">
+                                <div class="ticket-desc">
+                                    <p><b>New York</b></p>
+                                    <p style="opacity: 0.6;">Fri 27 Nov 2016</p>
+                                    <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                                    <button onclick="showmodal()">Buy Tickets</button>
+                                </div>
+                            </div>
+
+                            <div class="destination-ticket col col-padding col-third">
+                                <img src="https://www.w3schools.com/w3images/paris.jpg" alt="">
+                                <div class="ticket-desc">
+                                    <p><b>Paris</b></p>
+                                    <p style="opacity: 0.6;">Sat 28 Nov 2016</p>
+                                    <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                                    <button onclick="showmodal()">Buy Tickets</button>
+                                </div>
+                            </div>
+
+                            <div class="destination-ticket col col-padding col-third">
+                                <img src="https://www.w3schools.com/w3images/sanfran.jpg" alt="">
+                                <div class="ticket-desc">
+                                    <p><b>San Francisco</b></p>
+                                    <p style="opacity: 0.6;">Sun 29 Nov 2016</p>
+                                    <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                                    <button onclick="showmodal()">Buy Tickets</button>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ticket Modal -->
+                <div id="ticket-modal">
+                    <div class="modal-content">
+                        <button onclick="exitmodal()" class="close-btn"><i class="fa-solid fa-xmark"></i></button>
+                        <div class="modal-header">
+                            <h1><i class="fa-solid fa-suitcase"></i> Tickets</h1>
+                        </div>
+                        <div class="modal-body">
+                            <label for="modal-quantity" class="form-label">
+                                <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+                                Tickets, $15 per person
+                            </label>
+                            <input id="modal-quantity" type="text" class="form-control modal-input" placeholder="How many?">
+
+                            <label for="modal-email" class="form-label">
+                                <i class="fa-solid fa-user"></i>
+                                Send To
+                            </label>
+                            <input id="modal-email" type="text" class="form-control modal-input" placeholder="Enter email">
+
+                            <button>PAY <i class="fa fa-check"></i></button>
+                        </div>
+                        <div class="modal-footer">
+                            <button onclick="exitmodal()">Close <i class="fa-solid fa-xmark"></i></button>
+                            <p>Need <a class="text-blue" href="">help?</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact section -->
+                <div class="content-section" id="contact">
+                    <h1 class="section-heading">Contact</h1>
+                    <p class="section-sub-heading">Fan? Drop a note!</p>
+                    <div class="row">
+                        <div class="col col-half contact-info">
+                            <p><i class="fa-solid fa-location-dot"></i> <span>Chicago, US</span></p>
+                            <p><i class="fa-solid fa-phone"></i> <span>Phone: <a href="tel:+00 151515">+00 151515</a></span></p>
+                            <p><i class="fa-solid fa-envelope"></i> <span>Email: <a href="mailto:mail@mail.com">mail@mail.com</a></span></p>
+                        </div>
+
+                        <div class="col col-half contact-form">
+                            <form action="">
+                                <div class="row-padding">
+                                    <div class="col col-padding col-half">
+                                        <input type="text" name="contact-name" id="contact-name" class="form-control" placeholder="Name">
+                                    </div>
+                                    <div class="col col-padding col-half">
+                                        <input type="email" name="contact-email" id="contact-email" class="form-control" placeholder="Email">
+                                    </div>
+                                </div>
+    
+                                <input type="text" class="form-control" placeholder="Message">
+
+                                <button>SEND</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <img id="map" src="https://www.w3schools.com/w3images/map.jpg" alt="">
+
+            <div id="footer" class="text-center">
+                <div class="social-link">
+                    <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-snapchat"></i></a>
+                    <a href=""><i class="fa-brands fa-pinterest-p"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp">w3.css</a></p>
+            </div>
+        </div>
+    
+        <!-- script modal -->
+        <script>
+            const myModal = document.getElementById("ticket-modal")
+            function showmodal() {
+                myModal.classList.add("show")
+            }
+
+            function exitmodal() {
+                myModal.classList.remove("show")
+            }
+
+            //code cho dong modal
+            window.onclick = function(event) {
+                // console.log(event.target)
+                if(event.target == myModal) {
+                    document.getElementById("ticket-modal").classList.remove("show")
+                }
+            }
+        </script>
+
+        <!-- script mobile menu -->
+        <script>
+            const header = document.getElementById("header")
+            let isHeaderShowed = false
+            toggleMenu = () => {
+                // console.log(isHeaderShowed)
+                if(isHeaderShowed) {
+                    header.removeAttribute("style")
+                }
+                else {
+                    header.style.height = "auto"
+                }
+                isHeaderShowed = !isHeaderShowed
+            }
+
+            closeMenu = () => {
+                if (isHeaderShowed) {
+                    header.removeAttribute("style")
+                    isHeaderShowed = false
+                }
+            }
+        </script>
+    </body>
+</html>
