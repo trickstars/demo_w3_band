@@ -261,6 +261,7 @@ button:hover {
     left: 50%;
     transform: translateX(-50%);
     padding: 32px 16px;
+    text-shadow: 2px 2px #000;
 }
 
 .slider-title h2 {
@@ -518,7 +519,7 @@ button:hover {
 }
 
 /* Mobile */
-@media (max-width: 740px) {
+@media (max-width: 739px) {
     #header {
         /* height: auto; */
         overflow: hidden;
